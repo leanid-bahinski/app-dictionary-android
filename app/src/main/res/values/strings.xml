@@ -1,0 +1,20 @@
+<resources>
+    <string name="name">App dictionary</string>
+    <string name="next">Next</string>
+    <string name="register">Save</string>
+
+    <string name="app_name">App name</string>
+    <string name="developer_name">Developer</string>
+    <string name="app_type">Type</string>
+    <string name="app_category">Category</string>
+
+    <string name="app_cost">Cost</string>
+    <string name="app_cost_type">Type</string>
+    <string name="free">Free</string>
+    <string name="paid">Paid</string>
+    <string name="subscribe">Subscribe</string>
+
+    <string name="app_release_date">Release date</string>
+    <string name="app_code">Code</string>
+    <string name="app_open_source">Open Source?</string>
+</resources>

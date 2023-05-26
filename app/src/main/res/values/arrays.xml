@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="app_type">
+        <item>Site</item>
+        <item>Application</item>
+    </string-array>
+    <string-array name="app_category">
+        <item>Game</item>
+        <item>Social</item>
+        <item>Productivity</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+    </string-array>
+</resources>

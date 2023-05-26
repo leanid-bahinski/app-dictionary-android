@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_cost_type"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/radioGroupCostType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15px">
+
+            <RadioButton
+                android:id="@+id/radioBtnFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free" />
+            <RadioButton
+                android:id="@+id/radioBtnPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paid" />
+            <RadioButton
+                android:id="@+id/radioBtnSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subscribe" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_cost"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/editAppCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15px"/>
+
+        <Button
+            android:id="@+id/btnPriceNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+    </LinearLayout>
+</ScrollView>
