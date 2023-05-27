@@ -2,7 +2,6 @@ package com.example.l3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.l3.databinding.ActivityCreateInfoBinding
 
@@ -17,25 +16,28 @@ class CreateInfoActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.btnCreateNext.setOnClickListener {
-            val intentSave = Intent(this, SaveActivity::class.java)
+            val intentSocial = Intent(this, SocialInfoActivity::class.java)
+
             val appName = intent.getStringExtra("AppName")
             val appDeveloper = intent.getStringExtra("AppDeveloper")
             val appType = intent.getStringExtra("AppType")
             val appCategory = intent.getStringExtra("AppCategory")
+            var logo = intent.getStringExtra("LogoPath")
             var appCostType = intent.getStringExtra("AppCostType")
             var appCost = intent.getStringExtra("AppCost")
             val appReleaseDate = "${binding.datePickerRelease.dayOfMonth}-${binding.datePickerRelease.month + 1}-${binding.datePickerRelease.year}"
             val appOpenSource = binding.checkBoxOpenSource.isChecked
 
-            intentSave.putExtra("AppName", appName)
-            intentSave.putExtra("AppDeveloper", appDeveloper)
-            intentSave.putExtra("AppType", appType)
-            intentSave.putExtra("AppCategory", appCategory)
-            intentSave.putExtra("AppCostType", appCostType)
-            intentSave.putExtra("AppCost", appCost)
-            intentSave.putExtra("AppReleaseDate", appReleaseDate)
-            intentSave.putExtra("AppOpenSource", appOpenSource)
-            startActivity(intentSave)
+            intentSocial.putExtra("AppName", appName)
+            intentSocial.putExtra("AppDeveloper", appDeveloper)
+            intentSocial.putExtra("AppType", appType)
+            intentSocial.putExtra("AppCategory", appCategory)
+            intentSocial.putExtra("LogoPath", logo)
+            intentSocial.putExtra("AppCostType", appCostType)
+            intentSocial.putExtra("AppCost", appCost)
+            intentSocial.putExtra("AppReleaseDate", appReleaseDate)
+            intentSocial.putExtra("AppOpenSource", appOpenSource)
+            startActivity(intentSocial)
         }
     }
 

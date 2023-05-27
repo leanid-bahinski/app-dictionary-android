@@ -1,5 +1,7 @@
 package com.example.l3
 
+import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +25,14 @@ class SaveActivity : AppCompatActivity() {
         val appDeveloper = intent.getStringExtra("AppDeveloper")
         val appType = intent.getStringExtra("AppType")
         val appCategory = intent.getStringExtra("AppCategory")
+        var logo = intent.getStringExtra("LogoPath")
         var appCostType = intent.getStringExtra("AppCostType")
         var appCost = intent.getStringExtra("AppCost")
         var appReleaseDate = intent.getStringExtra("AppReleaseDate")
         var appOpenSource = intent.getBooleanExtra("AppOpenSource", false)
+        var appPhone = intent.getStringExtra("AppPhone")
+        var appEmail = intent.getStringExtra("AppEmail")
+        var appSocial = intent.getStringExtra("AppSocial")
 
         val appData = AppData(
             appName = appName,
@@ -36,13 +42,22 @@ class SaveActivity : AppCompatActivity() {
             appCostType = appCostType,
             appCost = appCost,
             appReleaseDate = appReleaseDate,
-            appOpenSource = appOpenSource
+            appOpenSource = appOpenSource,
+            appPhone = appPhone,
+            appEmail = appEmail,
+            appSocial = appSocial,
+            logo = logo
         )
 
         binding.textViewAppData.text = appData.toString()
 
         binding.btnRegister.setOnClickListener {
+
             registerAppData(appData)
+
+            val intent = Intent(this, ListActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            startActivity(intent)
         }
     }
 

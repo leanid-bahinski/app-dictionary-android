@@ -29,10 +29,12 @@ class PriceInfoActivity : AppCompatActivity() {
 
         binding.btnPriceNext.setOnClickListener {
             val intentCreate = Intent(this, CreateInfoActivity::class.java)
+
             val appName = intent.getStringExtra("AppName")
             val appDeveloper = intent.getStringExtra("AppDeveloper")
             val appType = intent.getStringExtra("AppType")
             val appCategory = intent.getStringExtra("AppCategory")
+            var logo = intent.getStringExtra("LogoPath")
             var appCostType = selectedCostType
             var appCost = binding.editAppCost.text.toString()
 
@@ -40,6 +42,7 @@ class PriceInfoActivity : AppCompatActivity() {
             intentCreate.putExtra("AppDeveloper", appDeveloper)
             intentCreate.putExtra("AppType", appType)
             intentCreate.putExtra("AppCategory", appCategory)
+            intentCreate.putExtra("LogoPath", logo)
             intentCreate.putExtra("AppCostType", appCostType)
             intentCreate.putExtra("AppCost", appCost)
             startActivity(intentCreate)

@@ -10,18 +10,25 @@ data class AppData(
     val appCostType: String?,
     val appCost: String?,
     val appReleaseDate: String?,
-    val appOpenSource: Boolean
-) : Serializable {
+    val appOpenSource: Boolean,
+    val appPhone: String?,
+    val appEmail: String?,
+    val appSocial: String?,
+    val logo:  String?
+    ) : Serializable {
     override fun toString(): String {
         return """
             App Name: $appName
-            App Developer: $appDeveloper
-            App Type: $appType
-            App Category: $appCategory
-            App Cost Type: $appCostType
-            App Cost: $appCost
-            App Release Date: $appReleaseDate
-            Is App Open Source: $appOpenSource
+            Developer: $appDeveloper
+            Type: $appType
+            Category: $appCategory
+            Cost Type: $appCostType
+            Cost: $appCost
+            Release Date: $appReleaseDate
+            Is Open Source: $appOpenSource
+            Phone: $appPhone
+            Email: $appEmail
+            Social link: $appSocial
         """.trimIndent()
     }
 }

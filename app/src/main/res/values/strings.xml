@@ -1,5 +1,5 @@
 <resources>
-    <string name="name">App dictionary</string>
+    <string name="name">App dictionary PRO</string>
     <string name="next">Next</string>
     <string name="register">Save</string>
 
@@ -7,6 +7,7 @@
     <string name="developer_name">Developer</string>
     <string name="app_type">Type</string>
     <string name="app_category">Category</string>
+    <string name="label_logo">Select logo picture</string>
 
     <string name="app_cost">Cost</string>
     <string name="app_cost_type">Type</string>
@@ -17,4 +18,8 @@
     <string name="app_release_date">Release date</string>
     <string name="app_code">Code</string>
     <string name="app_open_source">Open Source?</string>
+
+    <string name="app_phone">Phone</string>
+    <string name="app_email">Email</string>
+    <string name="app_social">Social link</string>
 </resources>

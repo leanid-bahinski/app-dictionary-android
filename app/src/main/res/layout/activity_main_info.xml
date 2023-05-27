@@ -51,6 +51,19 @@
         android:entries="@array/app_category"
         android:layout_marginBottom="15px"/>
 
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/btnSelectPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_logo" />
+
     <Button
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
